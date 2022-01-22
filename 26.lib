@@ -1,0 +1,19 @@
+INCLUDE EMU8086.INC
+org 100h
+
+GOTOXY 15,4  
+PRINT 'ANS='
+mov ax,7
+;push ax
+mov bx,7
+shl ax,1
+add ax,bx
+CALL PRINT_NUM_UNS
+DEFINE_PRINT_NUM_UNS
+
+END
+ret
+
+
+
+

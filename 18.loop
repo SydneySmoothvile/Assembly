@@ -1,0 +1,22 @@
+
+org 100h
+
+; Have 2 numbers, Output smallest number
+MOV AX,30
+MOV BX,18
+CMP AX,BX
+JA X1 ;if ax>bx go to X1
+ADD AX,1
+OUT 199,AX
+JMP EXIT
+X1:
+xchg ax,bx
+
+OUT 199,AX
+EXIT:
+
+ret
+
+
+
+
